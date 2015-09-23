@@ -74,7 +74,7 @@ namespace LaserPoint_Keyence_WCF
             dataNode.InnerText = s;
             root.AppendChild(dataNode);
             XmlNode dateNode = document.CreateElement("TemperatureDateTime");
-            dateNode.InnerText = DateTime.Now.ToString("yyyyMMddHHmmssfff") + "Tz" + convertTimeZone(TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString());
+            dateNode.InnerText = DateTime.UtcNow.ToString("yyyyMMddHHmmssfff") + "Tz" + convertTimeZone(TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString());
             root.AppendChild(dateNode);
             return document.DocumentElement;
         }
@@ -87,7 +87,7 @@ namespace LaserPoint_Keyence_WCF
             dataNode.InnerText = ex;
             root.AppendChild(dataNode);
             XmlNode dateNode = document.CreateElement("ExceptionDateTime");
-            dateNode.InnerText = DateTime.Now.ToString("yyyyMMddHHmmssfff") + "Tz" + convertTimeZone(TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString());
+            dateNode.InnerText = DateTime.UtcNow.ToString("yyyyMMddHHmmssfff") + "Tz" + convertTimeZone(TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString());
             root.AppendChild(dateNode);
             return document.DocumentElement;
         }

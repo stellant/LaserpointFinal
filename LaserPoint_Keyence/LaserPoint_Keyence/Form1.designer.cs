@@ -193,17 +193,17 @@
             // checkBox_Monitor
             // 
             this.checkBox_Monitor.AutoSize = true;
-            this.checkBox_Monitor.Location = new System.Drawing.Point(40, 77);
+            this.checkBox_Monitor.Location = new System.Drawing.Point(27, 53);
             this.checkBox_Monitor.Name = "checkBox_Monitor";
-            this.checkBox_Monitor.Size = new System.Drawing.Size(61, 17);
+            this.checkBox_Monitor.Size = new System.Drawing.Size(99, 17);
             this.checkBox_Monitor.TabIndex = 2;
-            this.checkBox_Monitor.Text = "Monitor";
+            this.checkBox_Monitor.Text = "Date Time Limit";
             this.checkBox_Monitor.UseVisualStyleBackColor = true;
             // 
             // radioButton_Combined
             // 
             this.radioButton_Combined.AutoSize = true;
-            this.radioButton_Combined.Location = new System.Drawing.Point(20, 55);
+            this.radioButton_Combined.Location = new System.Drawing.Point(19, 11);
             this.radioButton_Combined.Name = "radioButton_Combined";
             this.radioButton_Combined.Size = new System.Drawing.Size(104, 17);
             this.radioButton_Combined.TabIndex = 1;
@@ -215,7 +215,7 @@
             // radioButton_Individual
             // 
             this.radioButton_Individual.AutoSize = true;
-            this.radioButton_Individual.Location = new System.Drawing.Point(19, 29);
+            this.radioButton_Individual.Location = new System.Drawing.Point(84, 20);
             this.radioButton_Individual.Name = "radioButton_Individual";
             this.radioButton_Individual.Size = new System.Drawing.Size(70, 17);
             this.radioButton_Individual.TabIndex = 0;

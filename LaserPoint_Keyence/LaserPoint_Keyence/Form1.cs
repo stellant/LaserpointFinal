@@ -216,10 +216,12 @@ namespace LaserPoint_Keyence
             textBox_Frequency.LostFocus += new System.EventHandler(OnLostListeningFrequency);
             textBox_BaudRate.Text = "9600";
             textBox_Frequency.Text = "1";
-            radioButton_Individual.Checked = true;
+            radioButton_Combined.Checked = true;
+            radioButton_Individual.Visible = false;
+            radioButton_Combined.Visible = false;
             button_connect.Enabled = false;
             button_close.Enabled = false;
-            checkBox_Monitor.Enabled = false;
+            checkBox_Monitor.Enabled = true;
         }
         /// <summary>
         /// Method to execute when text box on focus event occurs
@@ -361,7 +363,6 @@ namespace LaserPoint_Keyence
                     SetTimerValue();
                     WriteLog("Date Time Monitor Started..." + "   at " + DateTime.UtcNow.ToString("yyyyMMddHHmmssfff") + "Tz" + convertTimeZone(TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString()) + "\n");
                     WriteText("Date Time Monitor Started...");
-                    textBox_status.AppendText("Date Time Monitor Started...\n");
                 }
                 port = comboBox_Ports.SelectedItem.ToString().Trim();
                 baudRate = Convert.ToInt32(textBox_BaudRate.Text.ToString().Trim());
